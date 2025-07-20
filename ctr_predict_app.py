@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from datetime import datetime
 
 # Load model artifacts
 try:
