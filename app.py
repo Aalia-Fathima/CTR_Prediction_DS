@@ -3,16 +3,16 @@ import pandas as pd
 import joblib
 
 # Load model artifacts
-try:
-    model_artifacts = joblib.load("ctr_model_complete-2.pkl")
-    model = model_artifacts['model']
-    label_encoders = model_artifacts['label_encoders']
-    frequency_maps = model_artifacts['frequency_maps']
-    feature_columns = model_artifacts['feature_columns']
-    st.success("Model loaded successfully!")
-except:
-    st.error("Could not load model artifacts. Please check the file path.")
-    st.stop()
+# try:
+model_artifacts = joblib.load("ctr_model_complete-2.pkl")
+model = model_artifacts['model']
+label_encoders = model_artifacts['label_encoders']
+frequency_maps = model_artifacts['frequency_maps']
+feature_columns = model_artifacts['feature_columns']
+st.success("Model loaded successfully!")
+# except:
+#     st.error("Could not load model artifacts. Please check the file path.")
+#     st.stop()
 
 st.title("🎯 Ad Click-Through Rate (CTR) Prediction")
 st.markdown("Predict whether a user will click on an advertisement")
